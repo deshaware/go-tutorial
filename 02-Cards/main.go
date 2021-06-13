@@ -3,5 +3,15 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Print("Hello")
+	cards := newDeck()
+	// hand, remainingDeck := deal(cards, 5)
+	// hand.print()
+	// remainingDeck.print()
+	fmt.Println(cards.toString())
+
+	cards.saveToFile("my_cards.csv")
+}
+
+func newCard() string {
+	return "Five of Spades"
 }
